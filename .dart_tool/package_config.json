@@ -26,6 +26,12 @@
       "languageVersion": "2.4"
     },
     {
+      "name": "bottom_navy_bar",
+      "rootUri": "file:///D:/SOFTWARES/flutter_windows_v1.12.13+hotfix.9-stable/flutter/.pub-cache/hosted/pub.dartlang.org/bottom_navy_bar-5.4.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.2"
+    },
+    {
       "name": "charcode",
       "rootUri": "file:///D:/SOFTWARES/flutter_windows_v1.12.13+hotfix.9-stable/flutter/.pub-cache/hosted/pub.dartlang.org/charcode-1.1.3",
       "packageUri": "lib/",
@@ -200,7 +206,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2020-06-29T07:09:17.223317Z",
+  "generated": "2020-06-29T09:49:02.499613Z",
   "generator": "pub",
   "generatorVersion": "2.8.2"
 }

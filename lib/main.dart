@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_switch/flutter_switch.dart';
@@ -47,7 +48,7 @@ class MyApp extends StatelessWidget {
                   height: 188.0,
                   child: const DecoratedBox(
                     decoration: const BoxDecoration(
-                      color: Colors.grey,
+                      color: Color(0xFF837979),
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(16.0),
                         topRight: Radius.circular(16.0),
@@ -85,7 +86,7 @@ class MyApp extends StatelessWidget {
             new Container(
               child: const SizedBox(
                 width: 229.0,
-                height: 31.0,
+                height: 30.0,
                 child: const SizedBox(
                   child: Center(
                     child: Text(
@@ -100,12 +101,11 @@ class MyApp extends StatelessWidget {
               padding: EdgeInsets.all(15.0),
               child: Center(
                 child: new LinearPercentIndicator(
-                  width: 350,
+                  width: 354,
                   animation: true,
-                  lineHeight: 20.0,
+                  lineHeight: 12.0,
                   animationDuration: 2000,
-                  percent: 0.4,
-                  center: Text("40.0%"),
+                  percent: 0.03,
                   linearStrokeCap: LinearStrokeCap.roundAll,
                   progressColor: Color(0xFFE53D3D),
                 ),
@@ -200,6 +200,39 @@ class MyApp extends StatelessWidget {
               ),
             ),
           ],
+        ),
+        bottomNavigationBar: Padding(
+          padding: const EdgeInsets.all(18.0),
+          child: Container(
+            margin: EdgeInsets.all(10.0),
+            decoration: BoxDecoration(
+                color: Colors.orange,
+                shape: BoxShape.rectangle,
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(55.0),
+                    bottomRight: Radius.circular(25.0))),
+            child: BottomNavyBar(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              showElevation: true,
+              itemCornerRadius: 8,
+              curve: Curves.easeInBack,
+              items: [
+                BottomNavyBarItem(
+                  icon: Icon(Icons.indeterminate_check_box),
+                  title: Text('Home '),
+                  activeColor: Colors.black,
+                  textAlign: TextAlign.center,
+                ),
+                BottomNavyBarItem(
+                  icon: Icon(Icons.file_download),
+                  title: Text(''),
+                  activeColor: Colors.black,
+                  textAlign: TextAlign.center,
+                ),
+              ],
+              onItemSelected: (int value) {},
+            ),
+          ),
         ),
       ),
     );
